@@ -12,12 +12,12 @@ bluetooth.onBluetoothDisconnected(function () {
     basic.showIcon(IconNames.No)
     ketnoi = 0
 })
+let dulieuNhan = ""
 let ketnoi = 0
+let dulieuGui = ""
 bluetooth.startUartService()
 basic.showIcon(IconNames.Square)
 ketnoi = 0
-let dulieuGui = ""
-let dulieuNhan = ""
 basic.forever(function () {
     if (ketnoi == 1) {
         dulieuNhan = bluetooth.uartReadUntil(serial.delimiters(Delimiters.Hash))
